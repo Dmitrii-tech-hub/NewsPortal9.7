@@ -1,0 +1,11 @@
+<p>Привет, {{ user.username }}!</p>
+<p>Вот новые статьи в категории "{{ category.name }}" за последнюю неделю:</p>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        - {{ post.content|truncatechars:50 }}
+    </li>
+    {% endfor %}
+</ul>
+

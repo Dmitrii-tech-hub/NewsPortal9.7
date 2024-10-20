@@ -1,0 +1,5 @@
+<p>Привет, {{ user.username }}!</p>
+<p>В категории "{{ category.name }}" появилась новая статья: "{{ post.title }}".</p>
+<p>Краткое содержание: {{ post.content|truncatechars:50 }}</p>
+<p><a href="{% url 'post_detail' post.pk %}">Читать статью</a></p>
+

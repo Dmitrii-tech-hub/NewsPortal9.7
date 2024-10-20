@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}ВЕСТИ{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #003366, #0066cc); /* Blue gradient background */
+            color: #ffffff; /* White text */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            position: relative; /* For positioning */
+            z-index: 10; /* Ensure it appears above the main content */
+        }
+        .logo {
+            display: inline-flex;
+            align-items: center; /* Center the items vertically */
+            background-color: rgba(255, 255, 255, 0.9); /* White background for logo */
+            padding: 10px 20px;
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow */
+            font-size: 32px; /* Logo font size */
+            color: #003366; /* Dark blue text */
+            font-weight: bold; /* Bold text */
+        }
+        .logo svg {
+            margin-right: 10px; /* Spacing between icon and text */
+            width: 40px; /* Adjusted size for the globe icon */
+            height: 40px; /* Adjusted size for the globe icon */
+            fill: #003366; /* Dark blue color for the globe icon */
+        }
+        main {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff; /* White background for content area */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(90deg, #003366, #0066cc); /* Blue gradient background */
+            color: #ffffff; /* White text */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                    <circle cx="12" cy="12" r="10" stroke="#003366" stroke-width="2" fill="none"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12" stroke="#003366" stroke-width="2"></line>
+                    <line x1="12" y1="2" x2="12" y2="22" stroke="#003366" stroke-width="2"></line>
+                    <path d="M4.93 4.93a10 10 0 0 1 14.14 14.14" stroke="#003366" stroke-width="2"></path>
+                    <path d="M19.07 4.93a10 10 0 0 0-14.14 14.14" stroke="#003366" stroke-width="2"></path>
+                </svg>
+                ВЕСТИ
+            </div>
+        </h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 ВЕСТИ - VESTI</p>
+    </footer>
+</body>
+</html>
